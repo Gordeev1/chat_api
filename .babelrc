@@ -1,0 +1,31 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "stage-0"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@config": "./src/config.js",
+          "@controllers": "./src/controllers",
+          "@libs": "./src/libs",
+          "@models": "./src/models",
+          "@setup": "./src/setup",
+          "@app": "./src/app",
+          "@constants": "./src/constants",
+          "@utils": "./src/utils"
+        }
+      }
+    ]
+  ]
+}

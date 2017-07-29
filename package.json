@@ -1,0 +1,50 @@
+{
+  "name": "chat_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gordeev Artem",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./dist && babel -d ./dist ./src -s",
+    "prepare": "npm run build && node ./dist/scripts/prepare.js",
+    "start-dev": "NODE_ENV=development MODE=test nodemon ./src",
+    "start": "npm run build && pm2 start pm2.json"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "boom": "^5.1.0",
+    "hapi": "^16.4.3",
+    "hapi-async-handler": "^1.0.3",
+    "hapi-auth-jwt2": "^7.3.0",
+    "hapi-cors-headers": "^1.0.0",
+    "inert": "^4.2.0",
+    "ioredis": "^3.1.1",
+    "isomorphic-fetch": "^2.2.1",
+    "joi": "^10.6.0",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.11.1",
+    "node-pushnotifications": "^1.0.18",
+    "randomstring": "^1.1.5",
+    "sharp": "^0.18.2",
+    "socket.io": "^2.0.3",
+    "socketio-jwt": "^4.5.0",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chalk": "^2.0.1",
+    "eslint": "^4.3.0",
+    "eslint-plugin-node": "^5.1.1",
+    "hapi-swagger": "^7.7.0",
+    "memwatch-next": "^0.3.0",
+    "rimraf": "^2.6.1"
+  }
+}

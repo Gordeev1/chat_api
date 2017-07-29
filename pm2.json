@@ -1,0 +1,21 @@
+{
+    "name": "Chat",
+    "script": "./dist",
+    "node_args": [
+        "--max-old-space-size=2048"
+    ],
+    "env": {
+        "NODE_ENV": "production",
+        "MODE": "real",
+        "TLS_VERSION": 1,
+        "TLS_PASSWORD": "",
+        "API_VERSION": 1,
+        "GCM_KEY": "",
+        "MONGO_USER": "",
+        "MONGO_PASSWORD": "",
+        "REDIS_PASSWORD": "",
+        "AUTH_KEY": "",
+        "HOST": "",
+        "DOMAIN": ""
+    }
+}
