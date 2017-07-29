@@ -9,11 +9,6 @@ const previewResolutionByType = {
     messages: [200, 200]
 };
 
-/**
- * @param {String} url
- * @param {String} type
- * @return {Promise}
- */
 export const grabAndSaveImage = ({ url, type }) => {
 
     const random = randomstring.generate();

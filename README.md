@@ -6,6 +6,8 @@ $ npm i
 $ npm run start-dev
 ```
 
+Now documentation available at [localhost:8000/documentation](localhost:8000/documentation)
+
 ## Preparing for production usage
 1. Make sure that these modules installed and available
 ```bash

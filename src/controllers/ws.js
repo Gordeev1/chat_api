@@ -12,13 +12,14 @@ export default io => {
         socket.on('join', payload => {
             const key = getRoomKey(payload);
             socket.join(key);
-            socket.to(key).emit(events.CHAT_USER_JOIN, { userId, id: payload.id });
+
+            payload.type === 'chat' && socket.to(key).emit(events.CHAT_USER_JOIN, { userId, id: payload.id });
         })
 
         socket.on('leave', payload => {
             const key = getRoomKey(payload);
             socket.leave(key);
-            socket.to(key).emit(events.CHAT_USER_LEAVE, { userId, id: payload.id });
+            payload.type === 'chat' && socket.to(key).emit(events.CHAT_USER_LEAVE, { userId, id: payload.id });
         })
 
         socket.on('disconnect', () => {
