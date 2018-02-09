@@ -15,7 +15,7 @@ const checkFacebookToken = ({ socialId, accessToken }) => {
 			if (result.id.toString() !== socialId.toString()) {
 				throw new Error('id does not match');
 			}
-			return id;
+			return result.id;
 		});
 };
 
